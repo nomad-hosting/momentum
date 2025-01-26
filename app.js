@@ -16,3 +16,9 @@ function handleMouseEnter() {
 function handleMouseLeave() {
     title.innerText = "mouse is leave"
 }
+
+window.addEventListener("resize", handleWindowResize)
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato"
+}
