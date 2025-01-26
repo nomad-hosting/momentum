@@ -1,5 +1,6 @@
-const calculator = {
-    plus: (a, b) => {console.log(a+b)}
-}
+const age = prompt('how old are you?')
 
-calculator.plus(2, 3)
+console.log(typeof age)
+
+console.log(parseInt(age))
+
