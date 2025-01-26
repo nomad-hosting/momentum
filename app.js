@@ -1,3 +1,3 @@
-const hellos = document.getElementsByClassName("hello")
+const title = document.querySelector("div h1:first-child")
 
-console.log(hellos)
+console.log(title.innerText)
