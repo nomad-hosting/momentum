@@ -1,4 +1,4 @@
-const title = document.querySelector("#title:first-child h1")
+const title = document.querySelector("div.hello:first-child h1")
 
 title.addEventListener("click", handleTitleClick)
 title.addEventListener("mouseenter", handleMouseEnter)
