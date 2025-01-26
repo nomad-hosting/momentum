@@ -1,6 +1,6 @@
-const age = prompt('how old are you?')
+const title = document.getElementById("title")
 
-console.log(typeof age)
+title.innerText = "Got you!"
 
-console.log(parseInt(age))
-
+console.log(title.id)
+console.log(title.className)
