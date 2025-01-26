@@ -1,7 +1,13 @@
-const h1 = document.querySelector("div.hello:first-child h1")
 
-h1.addEventListener("click", handleTitleClick)
+const loginForm = document.querySelector("#login-form")
+const loginInput = document.querySelector("#login-form input")
 
-function handleTitleClick() {
-    h1.classList.toggle("clicked")
+loginForm.addEventListener("submit", onLoginSubmit)
+
+function onLoginSubmit(event) {
+    event.preventDefault()
+    console.log(event) 
+    const username = loginInput.value
+
+    console.log(username)
 }
