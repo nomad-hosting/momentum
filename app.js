@@ -20,6 +20,8 @@ function handleMouseLeave() {
 // window event
 window.addEventListener("resize", handleWindowResize)
 window.addEventListener("copy", handleWindowCopy)
+window.addEventListener("offline", handleWindowOffline)
+window.addEventListener("online", handleWindowOnline)
 
 function handleWindowResize() {
     document.body.style.backgroundColor = "tomato"
@@ -27,4 +29,12 @@ function handleWindowResize() {
 
 function handleWindowCopy() {
     alert("copier")
+}
+
+function handleWindowOffline() {
+    alert("SOS no wifi")
+}
+
+function handleWindowOnline() {
+    alert("online!")
 }
