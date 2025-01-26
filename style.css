@@ -1,3 +1,16 @@
 body {
     background-color: beige;
 }
+
+.clicked {
+    color: tomato;
+}
+
+h1 {
+    color: cornflowerblue;
+    transition: color 1s ease-in-out
+}
+
+.sexy-font {
+    font-family: 'Courier New', Courier, monospace;
+}
