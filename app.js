@@ -17,8 +17,14 @@ function handleMouseLeave() {
     title.innerText = "mouse is leave"
 }
 
+// window event
 window.addEventListener("resize", handleWindowResize)
+window.addEventListener("copy", handleWindowCopy)
 
 function handleWindowResize() {
     document.body.style.backgroundColor = "tomato"
+}
+
+function handleWindowCopy() {
+    alert("copier")
 }
