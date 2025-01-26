@@ -14,11 +14,18 @@ function deleteTodo(event) {
     // this one is ok too
     //todoList.removeChild(event.target.parentNode)
 
-    event.target.parentNode.remove()
+    const li = event.target.parentNode
+
+    console.log(li.id)
+    todos = todos.filter((d)=> d.id !== parseInt(li.id))
+    saveTodos()
+
+    li.remove()
 }
 
-function paintTodo(newTodo) {
+function paintTodo(newTodoObj) {
     const newList = document.createElement("li")
+    newList.id = newTodoObj.id
 
     const span = document.createElement("span")
     newList.appendChild(span)
@@ -29,17 +36,18 @@ function paintTodo(newTodo) {
 
     newList.appendChild(button)
 
-    span.innerText = newTodo
+    span.innerText = newTodoObj.text
+
     todoList.appendChild(newList)
 }
 
 function handleTodoSubmit(event) {
     event.preventDefault()
-    const newTodo = todoInput.value
-    todos.push(newTodo)
+    const newTodoObj = {text: todoInput.value, id:Date.now()}
+    todos.push(newTodoObj)
     todoInput.value = ""  
 
-    paintTodo(newTodo)
+    paintTodo(newTodoObj)
     saveTodos()
 }
 
