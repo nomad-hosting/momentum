@@ -2,6 +2,7 @@ const title = document.querySelector("#title:first-child h1")
 
 title.addEventListener("click", handleTitleClick)
 title.addEventListener("mouseenter", handleMouseEnter)
+title.addEventListener("mouseleave", handleMouseLeave)
 
 function handleTitleClick() {
     title.style.color = 'red'
@@ -9,5 +10,9 @@ function handleTitleClick() {
 }
 
 function handleMouseEnter() {
-    console.log("mouse is here")
+    title.innerText = "mouse is here"
+}
+
+function handleMouseLeave() {
+    title.innerText = "mouse is leave"
 }
